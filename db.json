@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "title": "12345",
+      "completed": true,
+      "id": 1
+    },
+    {
+      "title": "1234",
+      "completed": true,
+      "id": 2
+    },
+    {
+      "title": "456",
+      "completed": true,
+      "id": 3
+    }
+  ]
+}
