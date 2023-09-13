@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Signup from "./Signup";
 
 const Login = () => {
   return (
@@ -33,7 +34,7 @@ const Login = () => {
       <input type="submit" value="Login"id="login"/>
     </div>
     <div class="sign_up">
-      Not a member? <Link style={{textDecoration:"none"}} to={"/sign_up"}>SignUp Now</Link>
+      Not a member? <Link style={{textDecoration:"none"}} to={"/signup"}>SignUp Now</Link>
     </div>
   </form>
 </div>
