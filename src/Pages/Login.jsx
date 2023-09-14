@@ -1,8 +1,41 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import Signup from "./Signup";
+//import Signup from "./Signup";
+import "../Styles/Login.css"
+import { AuthContext } from "../Context/AuthContextProvider";
 
 const Login = () => {
+
+  const {signArray, setNameLogin} = useContext(AuthContext)
+  const [signData, setSignData] = useState({
+    email: "",
+    password:"",
+  })
+
+  const loginForm = (e) => {
+    e.preventDefault();
+        let data1 = signArray.filter((el) => {
+          return el.email === signData.email && el.password === signData.password;
+        })
+    
+        if(data1.length>=1){
+          alert("login Successfully");
+          let data2 = signArray.filter((el) => {
+           if(el.email === signData.email && el.password === signData.password){
+            return el.name;
+           }
+          })
+           setNameLogin(data2[0].name);
+           <Link to='/'></Link>
+          
+    
+        }
+        else{
+          alert("Please SignUp First or Fill correct Details");
+        }
+    }
+
+
   return (
   <div className='body'>
   <div class="main_div">
@@ -12,13 +45,19 @@ const Login = () => {
  
     <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den"><i class="fab fa-twitter"></i><span>Twitter</span></a>
   </div>
-  <form>
+  <form onSubmit={loginForm}>
     <div class="input_box">
-      <input type="text" placeholder="Email or Phone" name="email" required id="login_email"/>
+      <input type="text" placeholder="Email or Phone" name="email" required id="login_email"
+      value={signData.email}
+      onChange={(e) => setSignData({...signData,[e.target.name]:e.target.value})}
+      />
       <div class="icon"><i class="fas fa-user"></i></div>
     </div>
     <div class="input_box">
-      <input type="password" placeholder="Password" required id="password"  name="password" />
+      <input type="password" placeholder="Password" required id="password"  name="password"
+      value={signData.password}
+      onChange={(e) => setSignData({...signData,[e.target.name]:e.target.value})}
+      />
       <div class="icon"><i class="fas fa-lock"></i></div>
     </div>
     <div class="option_div">
