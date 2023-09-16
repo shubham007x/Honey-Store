@@ -12,7 +12,6 @@ const Homepage = () => {
       <TopSection />
       <MiddleSection />
       <Subscribe />
-      <Footer />
     </div>
   );
 };

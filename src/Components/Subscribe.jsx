@@ -1,6 +1,6 @@
 import React from "react";
 import HomeButtons from "./hompage_components/HomeButtons";
-import Syle from "../Styles/subscribe.css";
+import Style from "../Styles/subscribe.css";
 const Subscribe = () => {
   return (
     <div>
