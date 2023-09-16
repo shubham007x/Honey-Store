@@ -40,3 +40,23 @@
 .navbar_icon3 {
   margin-top: 1rem;
 }
+@media screen and (max-width: 400px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    border: none;
+  }
+  .navbar > div {
+    border: none;
+    gap: 2rem;
+    height: auto;
+    align-items: center;
+  }
+
+  .navbar_element > div {
+    margin: 0;
+    width: 100%;
+    border: none;
+  }
+}

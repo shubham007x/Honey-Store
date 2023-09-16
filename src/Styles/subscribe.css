@@ -1,0 +1,48 @@
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #185e49;
+  padding: 2rem;
+  color: #ffff;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-small;
+  color: grey;
+  justify-content: center;
+}
+input {
+  border: none; /* Single line border with gray color */
+  border-bottom: 1px solid gray;
+  color: gray; /* Text color */
+  background-color: #185e49; /* Background color */
+  padding: 5px 0px; /* Add padding for spacing inside the input */
+  outline: none; /* Remove the default input focus outline */
+  margin-right: 3rem;
+  gap: 1rem;
+}
+h1 {
+  font-size: large;
+  font-weight: 100;
+}
+h5 {
+  font-size: xx-small;
+  font-weight: 100;
+}
+.home_buttons {
+  background-color: #185e49;
+  color: #ffff;
+  margin-top: 1rem;
+}
+.quote {
+  margin: 0;
+}
+@media (max-width: 550px) {
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

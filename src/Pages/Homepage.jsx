@@ -1,10 +1,20 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
+import TopSection from "../Components/hompage_components/TopSection";
+import MiddleSection from "../Components/hompage_components/MiddleSection";
+import Subscribe from "../Components/Subscribe";
+import Footer from "../Components/Footer";
 const Homepage = () => {
   const store = useSelector((state) => state.products);
   console.log(store);
-  return <div>Homepage</div>;
+  return (
+    <div>
+      <TopSection />
+      <MiddleSection />
+      <Subscribe />
+      <Footer />
+    </div>
+  );
 };
 
 export default Homepage;
