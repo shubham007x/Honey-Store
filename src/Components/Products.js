@@ -1,8 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getRestaurants } from '../Redux/Action';
+import "../Styles/Product.css"
+import { Link } from 'react-router-dom';
 
-const Products = () => {
+const Products = ({sort,cat,curr}) => {
+  
+  const dispatch=useDispatch();
+  const data=useSelector(state=> state);
+  console.log(data);
+  useEffect(()=>{
+    dispatch(getRestaurants(curr,sort,cat));
+  },[curr,sort,cat])
   return (
-    <div>Products</div>
+    <div className='allProd'>
+     {data.products?.map((ele,idx)=>(
+      <div key={idx} className='cards'>
+      <Link to={`/product/${ele.id}`}>
+          <div className='cardImg'>
+            <img src={ele.image} alt={ele.title}/>
+          </div>
+          </Link>
+          <div className='cardInfo'>
+            <h3><span>⭐{ele.rating}</span>{ele.title}</h3>
+            <h4>{ele.category}</h4>
+           
+          <div><p>₹{ele.price}</p>
+          <button>Add To Cart</button>
+          </div>   
+          </div>
+      </div>
+     ))}
+     {/* Pagination */}
+    </div>
   )
 }
 
