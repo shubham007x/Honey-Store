@@ -81,6 +81,26 @@ const MiddleSection = () => {
             <p>Providing homes for our splendid pollinators</p>
           </div>
         </div>
+        <div id="#" className="section_3">
+          <div>
+            <h2>OUR BLOG</h2>
+            <h3 style={{ fontFamily: "cursive" }}> for real honey fans</h3>
+          </div>
+          <div>
+            <hr style={{ border: "0.1px solid black", width: "100%" }}></hr>
+            HOW TO DISTINGUISH REAL HONEY FROM ARTIFICIAL HONEY?
+            <p>Jan 18,2023</p>
+            <img src="https://i.ibb.co/pZwjjy6/h1.png"></img>
+          </div>
+          <div>
+            <hr style={{ border: "0.1px solid black", width: "100%" }}></hr>
+            RECIPE FOR HOMEMADE HONEY CAKE THAT WILL NOT LEAVE ANYONE
+            INDIFFERENT
+            <p>Jan 10,2023</p>
+            <img src="https://i.ibb.co/y8V6MLy/h2.png"></img>
+          </div>
+        </div>
+        <HomeButtons name={"READ MORE"} />
       </div>
     </div>
   );
