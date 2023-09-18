@@ -4,9 +4,11 @@
     font-family: 'Poppins', sans-serif;
     width: 85%;
     margin: auto;
-    border: 2px solid black;
+    
 }
 .imgDiv{
+    display: flex;
+    justify-content: center;
      width: 100%;
 }
 .imgDiv>img{
@@ -30,15 +32,17 @@ gap: 25px;
   width: 100%;
   height: 300px;
 }
-.cardInfo>h3{
+.cardInfo>span{
     margin-left: 10px;
+    font-size: 18px;
 }
-.cardInfo>h3>span{
-    display: flex;
-    align-content: start;
+.cardInfo>h3{
+    text-align: center;
 }
+
 .cardInfo>h4{
     background-color: rgb(201, 201, 201); 
+    padding-left: 10px;
     width: 70px   
 }
 .cardInfo>div{
@@ -66,7 +70,7 @@ gap: 25px;
 .BigCard{
     font-family: 'Poppins', sans-serif;
     margin: 90px;
-    border: 2px solid rgb(25,94,73);
+    
 }
 .singleCard{
     display: flex;
@@ -137,15 +141,16 @@ hr{
 
 .about{
     display: flex;
-    gap: 40px;
     width: 100%;
+gap: 40px;
 }
 .ImageA>img{
     width: 700px;
     height: 600px;
 }
 .in{
-   width: 40%;
+   width: 35%;
+    
 }
 .in>p{
     display: flex;
@@ -163,10 +168,147 @@ hr{
     margin-bottom: 80px;
 }
 .finalImg>img{
- width: 80%;
+    width: 100%;
+ /* height: 550px; */
 }
 .finalImg{
+    
     display:flex;
     justify-content: center;
     margin-top: 50px;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 50px;
+}
+.pagination>button{
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.controls{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.controls>div>select{
+    border: 0;
+    margin: 10px;
+    font-size: 16px;
+}
+
+/* Mobile */
+
+
+/* Tablet */
+@media  (max-width: 1304px) {
+    .productsList {
+        width: 90%;
+        margin: auto;
+    }
+    .cards{
+        width: 400px;
+        margin: auto;
+    }
+    .allProd {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Add more responsive styles for tablets if needed */
+}
+@media  (max-width: 1104px) {
+     .ImageA>img{
+       width: 400px;
+       height: 400px;
+     } 
+     .ImageD>img{
+        width: 400px;
+       height: 400px;
+     }   
+}
+@media (max-width: 870px){
+    .allProd {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .detail>h3{
+        display: none;
+    }
+    .cards{
+        width: 400px;
+        margin: auto;
+    }
+    .singleCard{
+        flex-direction: column;
+        
+        justify-content: center;
+    }
+    .about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .in{
+        width: 100%
+     }
+
+}
+/* Desktop */
+
+@media (max-width: 400px) {
+    .productsList {
+        width: 100%;
+    }
+    .cards{
+        width: 300px;
+       
+        margin: auto;
+    }
+    .allProd {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .ImageA>img{
+        width: 200px;
+        height: 200px;
+      } 
+      .ImageD>img{
+         width: 200px;
+        height: 200px;
+      }   
+    
+    .imgDiv > img {
+        width: 100%;
+    }
+    .carting{
+        width: 90px;
+        margin-bottom: 20px;
+    }
+    .carting>button{
+        padding: 5px;
+        font-size: 15px;
+    }
+    .cartingM{
+        justify-content: space-around;
+        gap: 5px;
+    }
+    .cartingM>button{
+      font-size: 12px;
+      width: 150px;
+      margin-bottom: 20px;
+    }
+.detail>h1{
+     font-size: 25px;
+}
+.finalImg>img{
+    width: 100%;
+    margin: 0;
+    height: 120px;
+}
+.in{
+    width: 100%
+ }
+    /* Add more responsive styles for smaller screens if needed */
 }

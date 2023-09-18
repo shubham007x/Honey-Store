@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getRestaurants } from '../Redux/Action';
+import { AddingTocrat, getRestaurants } from '../Redux/Action';
 import "../Styles/Product.css"
 import { Link } from 'react-router-dom';
 
@@ -12,6 +12,11 @@ const Products = ({sort,cat,curr}) => {
   useEffect(()=>{
     dispatch(getRestaurants(curr,sort,cat));
   },[curr,sort,cat])
+  
+  const handleClick=(id)=>{
+    dispatch(AddingTocrat(id));
+  }
+
   return (
     <div className='allProd'>
      {data.products?.map((ele,idx)=>(
@@ -22,11 +27,13 @@ const Products = ({sort,cat,curr}) => {
           </div>
           </Link>
           <div className='cardInfo'>
-            <h3><span>⭐{ele.rating}</span>{ele.title}</h3>
+          
+          <span>⭐{ele.rating}</span>
+            <h3>{ele.title}</h3>
             <h4>{ele.category}</h4>
            
           <div><p>₹{ele.price}</p>
-          <button>Add To Cart</button>
+          <button onClick={()=>handleClick(ele.id)}>Add To Cart</button>
           </div>   
           </div>
       </div>

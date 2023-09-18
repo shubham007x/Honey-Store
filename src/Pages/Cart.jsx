@@ -1,4 +1,4 @@
-import React from "react";
+
 import Footer from "../Components/Footer";
 import { useSelector } from "react-redux";
 import Styles from "../Styles/cartpage.css";
@@ -80,6 +80,7 @@ const Cart = () => {
       </div>
     </div>
   );
+
 };
 
 export default Cart;
