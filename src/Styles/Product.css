@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins&display=swap");
+.productsList {
+  font-family: "Poppins", sans-serif;
+  width: 85%;
+  margin: auto;
+}
+.imgDiv {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+}
+.imgDiv > img {
+  width: 80%;
+}
+.allProd {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.cards {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 15px;
+}
+
+.cards:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 8px 16px 0px;
+}
+.cardImg > img {
+  width: 100%;
+  height: 300px;
+}
+.cardInfo > span {
+  margin-left: 10px;
+  font-size: 18px;
+}
+.cardInfo > h3 {
+  text-align: center;
+}
+
+.cardInfo > h4 {
+  background-color: rgb(201, 201, 201);
+  padding-left: 10px;
+  width: 70px;
+}
+.cardInfo > div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.cardInfo > div > p {
+  font-size: 18px;
+  margin-right: 50px;
+}
+
+.cardInfo > div > button {
+  background-color: rgb(25, 94, 73);
+  margin-left: 120px;
+  border: 0;
+  color: white;
+  height: 40px;
+  width: 130px;
+  margin-top: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.BigCard {
+  font-family: "Poppins", sans-serif;
+  margin: 90px;
+}
+.singleCard {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  gap: 40px;
+}
+.detail {
+  margin-right: 30px;
+  width: 100%;
+}
+.ImageD > img {
+  width: 700px;
+  height: 600px;
+}
+.detail > h1 {
+  font-size: 40px;
+  width: 100%;
+}
+.detail > h3 {
+  font-size: 15px;
+}
+.detail > h3 > span {
+  color: rgb(25, 94, 73);
+}
+.price {
+  width: 90%;
+
+  display: flex;
+  justify-content: space-between;
+}
+hr {
+  width: 98%;
+}
+.price > h3 {
+  margin: 0;
+}
+.carting > button {
+  border: 0;
+  cursor: pointer;
+  background-color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.carting {
+  border: 1px solid rgb(25, 94, 73);
+  border-radius: 80px;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+}
+.cartingM {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+.cartingM > button {
+  width: 70%;
+  background-color: rgb(25, 94, 73);
+  border: 0;
+  color: white;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.about {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+}
+.ImageA > img {
+  width: 700px;
+  height: 600px;
+}
+.in {
+  width: 35%;
+}
+.in > p {
+  display: flex;
+  justify-content: space-between;
+  margin: 1px;
+}
+.in > p > span {
+  font-weight: bold;
+  font-size: 20px;
+}
+.para > p {
+  font-size: 14px;
+}
+.in > h2 {
+  margin-bottom: 80px;
+}
+.finalImg > img {
+  width: 100%;
+  /* height: 550px; */
+}
+.finalImg {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 50px;
+}
+.pagination > button {
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.controls > div > select {
+  border: 0;
+  margin: 10px;
+  font-size: 16px;
+}
+
+/* Mobile */
+
+/* Tablet */
+@media (max-width: 1304px) {
+  .productsList {
+    width: 90%;
+    margin: auto;
+  }
+  .cards {
+    width: 400px;
+    margin: auto;
+  }
+  .allProd {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Add more responsive styles for tablets if needed */
+}
+@media (max-width: 1104px) {
+  .ImageA > img {
+    width: 400px;
+    height: 400px;
+  }
+  .ImageD > img {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (max-width: 870px) {
+  .allProd {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .detail > h3 {
+    display: none;
+  }
+  .cards {
+    width: 400px;
+    margin: auto;
+  }
+  .singleCard {
+    flex-direction: column;
+
+    justify-content: center;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .in {
+    width: 100%;
+  }
+}
+/* Desktop */
+
+@media (max-width: 400px) {
+  .productsList {
+    width: 100%;
+  }
+  .cards {
+    width: 300px;
+
+    margin: auto;
+  }
+  .allProd {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .ImageA > img {
+    width: 200px;
+    height: 200px;
+  }
+  .ImageD > img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .imgDiv > img {
+    width: 100%;
+  }
+  .carting {
+    width: 90px;
+    margin-bottom: 20px;
+  }
+  .carting > button {
+    padding: 5px;
+    font-size: 15px;
+  }
+  .cartingM {
+    justify-content: space-around;
+    gap: 5px;
+  }
+  .cartingM > button {
+    font-size: 12px;
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  .detail > h1 {
+    font-size: 25px;
+  }
+  .finalImg > img {
+    width: 100%;
+    margin: 0;
+    height: 120px;
+  }
+  .in {
+    width: 100%;
+  }
+  /* Add more responsive styles for smaller screens if needed */
+}
