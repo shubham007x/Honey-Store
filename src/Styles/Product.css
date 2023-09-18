@@ -4,12 +4,12 @@
   font-family: "Poppins", sans-serif;
   width: 85%;
   margin: auto;
-  margin-top: 3rem;
 }
 .imgDiv {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 3rem;
 }
 .imgDiv > img {
   width: 80%;

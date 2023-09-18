@@ -10,7 +10,7 @@ import {
   REMOVE_FROM_CART,
 } from "./ActionType";
 const initialState = {
-  isAuth: false,
+  isAuth: true,
   isLoading: false,
   isError: false,
   products: [],
