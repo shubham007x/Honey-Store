@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-//import Signup from "./Signup";
 import "../Styles/Login.css"
 import { AuthContext } from "../Context/AuthContextProvider";
 
@@ -23,6 +22,7 @@ const Login = () => {
           let data2 = signArray.filter((el) => {
            if(el.email === signData.email && el.password === signData.password){
             return el.name;
+            
            }
           })
            setNameLogin(data2[0].name);

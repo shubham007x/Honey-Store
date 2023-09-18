@@ -7,22 +7,23 @@ const Signup = () => {
 
   const {signArray, setSignArray } = useContext(AuthContext)
 
-  const[log,setLog] = useState({
+  const[log, setLog] = useState({
     name:"",
     email:"",
     phone:"",
     password:"",
   })
+
   console.log(log)
 
   const saveData = (e) => {
       e.preventDefault()
-   let logData = signArray.filter((elem)=>{
+    let logData = signArray.filter((elem)=>{
      return elem.email === log.email || elem.phone === log.phone
    })
-   if(logData.length >= 1){
+    if(logData.length >= 1){
       alert("All ready register")
-   }else{
+    }else{
       setSignArray([...signArray, log])
 
       alert("Register Successfully")
