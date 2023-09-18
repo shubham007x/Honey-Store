@@ -12,17 +12,17 @@ p {
   color: grey;
   justify-content: center;
 }
-input {
-  border: none; /* Single line border with gray color */
+.inp {
+  border: none;
   border-bottom: 1px solid gray;
   color: gray; /* Text color */
-  background-color: #185e49; /* Background color */
-  padding: 5px 0px; /* Add padding for spacing inside the input */
-  outline: none; /* Remove the default input focus outline */
+  background-color: #185e49;
+  padding: 5px 0px;
+  outline: none;
   margin-right: 3rem;
   gap: 1rem;
 }
-h1 {
+.subscribe > h1 {
   font-size: large;
   font-weight: 100;
 }

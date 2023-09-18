@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins&display=swap");
-* {
-  font-family: "Fjalla One";
-}
+
 .navbar {
   display: flex;
+  position: fixed;
+  top: 0rem;
   justify-content: space-around;
   align-items: center;
   border: 1px solid #185e49;
-  width: 100%;
+  width: 99%;
   height: 3rem;
+  background-color: #ffff;
+  z-index: 100;
+  left: 0.5%;
 }
 .navbar > div {
   border: 1px solid #185e49;
@@ -27,9 +30,10 @@
   align-items: center;
   height: 3rem;
 }
-.navbar_element > div {
+.navbar_element div {
   height: 3rem;
   width: 40%;
+  margin-bottom: 0.3rem;
 }
 .navbar_icon1 {
   margin-top: 1rem;

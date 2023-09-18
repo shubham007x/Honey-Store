@@ -1,14 +1,17 @@
 import React from "react";
 import sample from "./g.mp4";
 import Styles from "../../Styles/homepage.css";
+import { Link } from "react-router-dom";
 const TopSection = () => {
   return (
     <div className="homepage_main">
-      <div className="video_main">
-        <video className="video_play" autoPlay loop muted id="video">
-          <source src={sample} type="video/mp4" />
-        </video>
-      </div>
+      <Link to={"/product"}>
+        <div className="video_main">
+          <video className="video_play" autoPlay loop muted id="video">
+            <source src={sample} type="video/mp4" />
+          </video>
+        </div>
+      </Link>
 
       <p
         className="quote"
