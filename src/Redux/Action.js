@@ -1,12 +1,15 @@
 import axios from "axios";
 import {
   ADD_TO_CART,
+  EMPTY_CART,
   GET_RESTAURANTS_FAILURE,
   GET_RESTAURANTS_REQUEST,
   GET_RESTAURANTS_SUCCESS,
   GET_SINGLE_RESTAURANT_FAILURE,
   GET_SINGLE_RESTAURANT_REQUEST,
   GET_SINGLE_RESTAURANT_SUCCESS,
+  LOGIN,
+  LOGOUT,
   REMOVE_FROM_CART,
 } from "./ActionType";
 import { type } from "@testing-library/user-event/dist/type";
@@ -66,4 +69,15 @@ export const AddingTocrat = (id) => async (dispatch) => {
 
 export const removeCart = (payload) => {
   return createAction(REMOVE_FROM_CART, payload);
+};
+
+export const emptyCart = (dispatch) => {
+  dispatch({ type: EMPTY_CART });
+};
+
+export const logout = (dispatch) => {
+  dispatch({ type: LOGOUT });
+};
+export const login = (dispatch) => {
+  dispatch({ type: LOGIN });
 };

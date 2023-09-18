@@ -1,16 +1,19 @@
 import React from "react";
 import {
   ADD_TO_CART,
+  EMPTY_CART,
   GET_RESTAURANTS_FAILURE,
   GET_RESTAURANTS_REQUEST,
   GET_RESTAURANTS_SUCCESS,
   GET_SINGLE_RESTAURANT_FAILURE,
   GET_SINGLE_RESTAURANT_REQUEST,
   GET_SINGLE_RESTAURANT_SUCCESS,
+  LOGIN,
+  LOGOUT,
   REMOVE_FROM_CART,
 } from "./ActionType";
 const initialState = {
-  isAuth: true,
+  isAuth: false,
   isLoading: false,
   isError: false,
   products: [],
@@ -40,6 +43,21 @@ const reducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         cart: [...payload],
+      };
+    case EMPTY_CART:
+      return {
+        ...state,
+        cart: [],
+      };
+    case LOGIN:
+      return {
+        ...state,
+        isAuth: true,
+      };
+    case LOGOUT:
+      return {
+        ...state,
+        isAuth: false,
       };
     default:
       return state;

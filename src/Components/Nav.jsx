@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "../Styles/nav.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
   faCartShopping,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { AuthContext } from "../Context/AuthContextProvider";
+import { logout } from "../Redux/Action";
 
 const Nav = () => {
   const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  const { nameLogin } = useContext(AuthContext);
+  const navigate = useNavigate();
+  console.log(nameLogin);
+
   return (
     <div className="navbar">
       <Link to={"/"} style={{ textDecoration: "none", color: "#185e49" }}>
@@ -62,6 +69,17 @@ const Nav = () => {
             </span>
           </div>
         </Link>
+        <p>
+          {nameLogin}{" "}
+          <button
+            onClick={() => {
+              dispatch(logout);
+              navigate("/login");
+            }}
+          >
+            LOGOUT
+          </button>
+        </p>
       </div>
     </div>
   );
