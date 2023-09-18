@@ -1,4 +1,14 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins&display=swap");
+.App {
+  font-family: "Fjalla One";
+  text-align: center;
+}
+.first_element {
+  background-color: black;
+  color: #ffff;
+  margin: 0;
+  padding: 0;
+}
 
 .App-logo {
   height: 40vmin;
@@ -34,6 +44,3 @@
     transform: rotate(360deg);
   }
 }
-
-
-
