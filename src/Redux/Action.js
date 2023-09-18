@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_RESTAURANTS_FAILURE, GET_RESTAURANTS_REQUEST, GET_RESTAURANTS_SUCCESS, GET_SINGLE_RESTAURANT_FAILURE, GET_SINGLE_RESTAURANT_REQUEST, GET_SINGLE_RESTAURANT_SUCCESS } from "./ActionType";
+import { ADD_TO_CART, GET_RESTAURANTS_FAILURE, GET_RESTAURANTS_REQUEST, GET_RESTAURANTS_SUCCESS, GET_SINGLE_RESTAURANT_FAILURE, GET_SINGLE_RESTAURANT_REQUEST, GET_SINGLE_RESTAURANT_SUCCESS } from "./ActionType";
 const BaseURL = `http://localhost:8080/products`;
 const createAction = (type, payload) => {
   return { type, payload };
@@ -44,3 +44,14 @@ export const getSingleRestaurant =(id)=>async (dispatch) => {
         dispatch({type:GET_SINGLE_RESTAURANT_FAILURE,payload:error})
     }
 };
+
+export const AddingTocrat=(id)=>async (dispatch)=>{
+  try{
+    var ress=await axios.get(`http://localhost:8080/products/${id}`)
+    dispatch({type:ADD_TO_CART,payload:ress.data})
+  }
+  catch(error){
+    console.log(error);
+    dispatch({type:GET_SINGLE_RESTAURANT_FAILURE,payload:error})
+  }
+}
