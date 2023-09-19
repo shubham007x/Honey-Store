@@ -6,7 +6,6 @@ import { emptyCart } from "../Redux/Action";
 const Payment = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   useEffect(() => {
     const interval = setInterval(() => {
       dispatch(emptyCart);
@@ -16,7 +15,7 @@ const Payment = () => {
   return (
     <div>
       <br></br>
-      <h1 style={{ fontFamily: "cursive", color: "#185e49" }}>
+      <h1 style={{ fontFamily: "cursive", color: "#185e49", margin: "20rem" }}>
         Payment Successful.... Redirecting in 5 sec
       </h1>
     </div>
