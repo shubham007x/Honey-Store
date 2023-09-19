@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import '../Styles/Signup.css'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { AuthContext } from '../Context/AuthContextProvider'
 
 const Signup = () => {
@@ -24,13 +24,12 @@ const Signup = () => {
     if(logData.length >= 1){
       alert("All ready register")
     }else{
-      setSignArray([...signArray, log])
-
-      alert("Register Successfully")
-      // setCheck(true);
+      setSignArray([...signArray, log]);
+      <Navigate to='/login'/>
+      
    }
   }
-  //console.log(arr) 
+  
 
 
 
