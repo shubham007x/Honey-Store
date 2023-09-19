@@ -13,7 +13,6 @@ const Login = () => {
     email: "",
     password: "",
   });
-  
 
   const loginForm = (e) => {
     e.preventDefault();
