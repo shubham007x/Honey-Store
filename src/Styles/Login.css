@@ -8,8 +8,14 @@
     display: grid;
     height: 100vh;
     place-items:center;
-    background: #f9AE05;
-    
+    background-color: whitesmoke;
+  }
+  .logName{
+    font-size: 20px;
+  }
+  .logName>span{
+    margin-left: 10px;
+    cursor: pointer;
   }
   .main_div{
     width: 400px;
