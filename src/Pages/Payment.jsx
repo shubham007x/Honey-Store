@@ -15,7 +15,7 @@ const Payment = () => {
   }, []);
   return (
     <div>
-      <h1>Payment</h1>
+      <br></br>
       <h1 style={{ fontFamily: "cursive", color: "#185e49" }}>
         Payment Successful.... Redirecting in 5 sec
       </h1>
