@@ -6,6 +6,7 @@ import {
   faUser,
   faCartShopping,
   faMagnifyingGlass,
+  faPowerOff,
 } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { AuthContext } from "../Context/AuthContextProvider";
@@ -17,6 +18,8 @@ const Nav = () => {
   const { nameLogin } = useContext(AuthContext);
   const navigate = useNavigate();
   console.log(nameLogin);
+  const checking=useSelector(state=>state.isAuth);
+  console.log(checking);
 
   return (
     <div className="navbar">
@@ -36,7 +39,7 @@ const Nav = () => {
           </div>
         </Link>
         <Link to={"/login"}>
-          <div className="navbar_icon2">
+          <div className="navbar_icon2" style={{display:checking? "none":"block"}}>
             <FontAwesomeIcon
               icon={faUser}
               size="2xl"
@@ -69,16 +72,16 @@ const Nav = () => {
             </span>
           </div>
         </Link>
-        <p>
-          {nameLogin}{" "}
-          <button
+        <p className="logName" style={{display:checking? "block":"none"}}>
+          {nameLogin}{"   "}
+          <span title="Logout"
             onClick={() => {
               dispatch(logout);
               navigate("/login");
             }}
           >
-            LOGOUT
-          </button>
+            <FontAwesomeIcon icon={faPowerOff} />
+          </span>
         </p>
       </div>
     </div>
