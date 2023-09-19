@@ -3,7 +3,7 @@ import HomeButtons from "./hompage_components/HomeButtons";
 import Style from "../Styles/subscribe.css";
 const Subscribe = () => {
   return (
-    <div>
+    <div className="apple">
       <p
         className="quote"
         style={{ color: "#000000", backgroundColor: "#F05A1F" }}
@@ -12,7 +12,7 @@ const Subscribe = () => {
           UNIQUE TASTE,UNIQUE AROMA OF RAW HONEY AND ORGANIC
           PRODUCTS:GRANOLA,HONEY BARS AND DESERTS,HERBAL TEA FROM POLAND
         </marquee>
-      </p>{" "}
+      </p>
       <div className="subscribe">
         <h1>SUBSCRIBE TO OUR NEWSLETTER</h1>
         <h5>SIGNUP FOR NEWS,UPDATES AND SPECIAL OFFERS! LET IT BEE:)</h5>
