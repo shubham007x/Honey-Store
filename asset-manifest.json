@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Honey-Store/static/css/main.20863594.css",
+    "main.js": "/Honey-Store/static/js/main.d777f561.js",
+    "static/js/787.b75d96a0.chunk.js": "/Honey-Store/static/js/787.b75d96a0.chunk.js",
+    "static/media/g.mp4": "/Honey-Store/static/media/g.b22e2eab8abfb71a8519.mp4",
+    "static/media/logo.svg": "/Honey-Store/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Honey-Store/index.html",
+    "main.20863594.css.map": "/Honey-Store/static/css/main.20863594.css.map",
+    "main.d777f561.js.map": "/Honey-Store/static/js/main.d777f561.js.map",
+    "787.b75d96a0.chunk.js.map": "/Honey-Store/static/js/787.b75d96a0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20863594.css",
+    "static/js/main.d777f561.js"
+  ]
+}
